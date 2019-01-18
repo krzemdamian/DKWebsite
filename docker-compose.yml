@@ -1,0 +1,14 @@
+version: '3'
+services:
+    dkwebsite-service:
+        container_name: dkwebsite
+        build: .
+
+    reverse-proxy:
+        container_name: reverse-proxy
+        image: nginx
+        ports:
+         - "443:443"
+         - "80:443"
+        volumes:
+         - ./nginx/proxy.conf:/etc/nginx/conf.d/default.conf
