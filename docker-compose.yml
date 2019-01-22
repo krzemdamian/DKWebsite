@@ -16,6 +16,6 @@ services:
     db:
         container_name: mysql-db
         image: hypriot/rpi-mysql
-        environment: MYSQL_ROOT_PASSWORD_FILE=/home/pi/website/config/db/MYSQL_ROOT_PASSWORD
+        env_file: /home/pi/website/config/db/.env
         volumes:
          - /home/pi/website/db/storage:/var/lib/mysql
