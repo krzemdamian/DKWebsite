@@ -1,0 +1,37 @@
+version: '3.4'
+networks:
+  frontend:
+    external: true
+  backend:
+    external: true
+
+services:
+  dkwebsite:
+    build:
+      context: .
+      dockerfile: Website/DKWebsite/Dockerfile
+    networks:
+     - frontend
+     - backend
+
+  nginx:
+    restart: unless-stopped
+    image: nginx
+    ports:
+     - "443:443"
+     - "80:80"
+    volumes:
+     - ./Network/nginx-certbot/data/nginx:/etc/nginx/conf.d
+     - ./Network/nginx-certbot/data/certbot/conf:/etc/letsencrypt
+     - ./Network/nginx-certbot/data/certbot/www:/var/www/certbot
+    command: "/bin/sh -c 'while :; do sleep 6h & wait $${!}; nginx -s reload; done & nginx -g \"daemon off;\"'"
+    networks:
+     - frontend
+
+  certbot:
+    image: j0nnylester/certbot
+    restart: unless-stopped
+    volumes:
+     - ./Network/nginx-certbot/data/certbot/conf:/etc/letsencrypt
+     - ./Network/nginx-certbot/data/certbot/www:/var/www/certbot
+    entrypoint: "/bin/sh -c 'trap exit TERM; while :; do certbot renew; sleep 12h & wait $${!}; done;'"

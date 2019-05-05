@@ -3,16 +3,33 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.28803.156
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DKWebsite", "DKWebsite\DKWebsite.csproj", "{ED20F98E-0E9C-4459-B205-B6484BB0EC3C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RaspberryREST", "TestApi\RaspberryREST.csproj", "{0CD1462F-F088-4D68-A1A6-0D925E036488}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AirSensorWebAPI", "AirSensorWebAPI\AirSensorWebAPI.csproj", "{68E71BD6-4A4E-4923-8473-447F50FD0DCE}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Domain", "Domain", "{A55C98F4-54CF-4178-80A5-2CA897CA5179}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{0A56C04B-5EE9-4869-8DC4-80954894ABE0}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Network", "Network", "{DE1EE309-F645-4FC8-8E8A-006138B4C579}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Website", "Website", "{279ADECF-D585-48A4-A200-5FEC4AFFAE8C}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "nginx-certbot", "nginx-certbot", "{A1B3AF74-01A2-4F5C-9DA2-92EF4F03A95A}"
 	ProjectSection(SolutionItems) = preProject
-		init-letsencrypt.sh = init-letsencrypt.sh
+		Network\nginx-certbot\docker-compose.test.yml = Network\nginx-certbot\docker-compose.test.yml
+		Network\nginx-certbot\init-letsencrypt.sh = Network\nginx-certbot\init-letsencrypt.sh
+		Network\nginx-certbot\README.md = Network\nginx-certbot\README.md
 	EndProjectSection
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TestApi", "TestApi\TestApi.csproj", "{0CD1462F-F088-4D68-A1A6-0D925E036488}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "data", "data", "{0BF5F476-F73A-4728-883B-92C6D3DA93D8}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "nginx", "nginx", "{228533C4-488C-4005-9266-F0B088F239A6}"
+	ProjectSection(SolutionItems) = preProject
+		Network\nginx-certbot\data\nginx\default.conf = Network\nginx-certbot\data\nginx\default.conf
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Sensor", "Sensor", "{D4AD5443-6106-4E1A-96D3-ACE7C8513FF2}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DKWebsite", "Website\DKWebsite\DKWebsite.csproj", "{56D2DB2F-0160-473D-B4D4-C4BFBBF1C624}"
+EndProject
+Project("{E53339B2-1760-4266-BCC7-CA923CBCF16C}") = "docker-compose", "docker-compose.dcproj", "{2C49365E-E67D-4A6B-8738-83FDD9D4448D}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -20,21 +37,28 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{ED20F98E-0E9C-4459-B205-B6484BB0EC3C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{ED20F98E-0E9C-4459-B205-B6484BB0EC3C}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{ED20F98E-0E9C-4459-B205-B6484BB0EC3C}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{ED20F98E-0E9C-4459-B205-B6484BB0EC3C}.Release|Any CPU.Build.0 = Release|Any CPU
-		{68E71BD6-4A4E-4923-8473-447F50FD0DCE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{68E71BD6-4A4E-4923-8473-447F50FD0DCE}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{68E71BD6-4A4E-4923-8473-447F50FD0DCE}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{68E71BD6-4A4E-4923-8473-447F50FD0DCE}.Release|Any CPU.Build.0 = Release|Any CPU
 		{0CD1462F-F088-4D68-A1A6-0D925E036488}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{0CD1462F-F088-4D68-A1A6-0D925E036488}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{0CD1462F-F088-4D68-A1A6-0D925E036488}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{0CD1462F-F088-4D68-A1A6-0D925E036488}.Release|Any CPU.Build.0 = Release|Any CPU
+		{56D2DB2F-0160-473D-B4D4-C4BFBBF1C624}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{56D2DB2F-0160-473D-B4D4-C4BFBBF1C624}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{56D2DB2F-0160-473D-B4D4-C4BFBBF1C624}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{56D2DB2F-0160-473D-B4D4-C4BFBBF1C624}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2C49365E-E67D-4A6B-8738-83FDD9D4448D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2C49365E-E67D-4A6B-8738-83FDD9D4448D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2C49365E-E67D-4A6B-8738-83FDD9D4448D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2C49365E-E67D-4A6B-8738-83FDD9D4448D}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{0CD1462F-F088-4D68-A1A6-0D925E036488} = {D4AD5443-6106-4E1A-96D3-ACE7C8513FF2}
+		{A1B3AF74-01A2-4F5C-9DA2-92EF4F03A95A} = {DE1EE309-F645-4FC8-8E8A-006138B4C579}
+		{0BF5F476-F73A-4728-883B-92C6D3DA93D8} = {A1B3AF74-01A2-4F5C-9DA2-92EF4F03A95A}
+		{228533C4-488C-4005-9266-F0B088F239A6} = {0BF5F476-F73A-4728-883B-92C6D3DA93D8}
+		{56D2DB2F-0160-473D-B4D4-C4BFBBF1C624} = {279ADECF-D585-48A4-A200-5FEC4AFFAE8C}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {18AC0EEE-74EF-4276-8F39-A066C4EA5F17}

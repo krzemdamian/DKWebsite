@@ -17,7 +17,7 @@
         "ASPNETCORE_ENVIRONMENT": "Development"
       }
     },
-    "TestApi": {
+    "RaspberryREST ": {
       "commandName": "Project",
       "launchBrowser": true,
       "launchUrl": "api/values",

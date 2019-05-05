@@ -7,7 +7,7 @@ FROM microsoft/dotnet:2.2-sdk AS build
 WORKDIR /src
 COPY ["DKWebsite.csproj", "DKWebsite/"]
 RUN dotnet restore "DKWebsite/DKWebsite.csproj"
-COPY . .
+COPY . "./DKWebsite/"
 WORKDIR "/src/DKWebsite"
 RUN dotnet build "DKWebsite.csproj" -c Release -o /app
 

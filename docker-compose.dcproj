@@ -3,9 +3,17 @@
   <PropertyGroup Label="Globals">
     <ProjectVersion>2.1</ProjectVersion>
     <DockerTargetOS>Linux</DockerTargetOS>
-    <ProjectGuid>75377603-e35f-45d6-a012-429b64156db8</ProjectGuid>
+    <ProjectGuid>2c49365e-e67d-4a6b-8738-83fdd9d4448d</ProjectGuid>
     <DockerLaunchAction>LaunchBrowser</DockerLaunchAction>
-    <DockerServiceUrl>{Scheme}://localhost:{ServicePort}/api/values</DockerServiceUrl>
-    <DockerServiceName>airsensorwebapi</DockerServiceName>
+    <DockerServiceUrl>{Scheme}://localhost:{ServicePort}</DockerServiceUrl>
+    <DockerServiceName>dkwebsite</DockerServiceName>
   </PropertyGroup>
+  <ItemGroup>
+    <None Include="docker-compose.prod.yml" />
+    <None Include="docker-compose.override.yml">
+      <DependentUpon>docker-compose.yml</DependentUpon>
+    </None>
+    <None Include="docker-compose.yml" />
+    <None Include=".dockerignore" />
+  </ItemGroup>
 </Project>
