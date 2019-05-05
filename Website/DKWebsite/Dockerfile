@@ -5,7 +5,7 @@ EXPOSE 443
 
 FROM microsoft/dotnet:2.2-sdk AS build
 WORKDIR /src
-COPY ["DKWebsite/DKWebsite.csproj", "DKWebsite/"]
+COPY ["DKWebsite.csproj", "DKWebsite/"]
 RUN dotnet restore "DKWebsite/DKWebsite.csproj"
 COPY . .
 WORKDIR "/src/DKWebsite"
