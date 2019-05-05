@@ -1,3 +1,6 @@
 [submodule "nginx-certbot"]
 	path = nginx-certbot
 	url = https://github.com/wmnnd/nginx-certbot.git
+[submodule "Network/nginx-certbot"]
+	path = Network/nginx-certbot
+	url = https://github.com/krzemdamian/nginx-certbot.git
