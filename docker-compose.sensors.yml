@@ -14,9 +14,9 @@ services:
      - backend
     privileged: true
 
-  prmiary:
+  primary:
     build:
-      context: Website/Prmiary/
+      context: Website/Primary/
       dockerfile: Dockerfile
     networks:
      - frontend

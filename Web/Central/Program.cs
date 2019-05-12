@@ -8,7 +8,7 @@ using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.Logging;
 
-namespace DKWebsite.Website.Primary
+namespace DKWeb.Web.Central
 {
     public class Program
     {
@@ -19,9 +19,9 @@ namespace DKWebsite.Website.Primary
 
         public static IWebHostBuilder CreateWebHostBuilder(string[] args) =>
             WebHost.CreateDefaultBuilder(args)
-                .UseStartup<Startup>();
-                //.UseKestrel()
-                //.UseUrls("https://*:5001")
+                .UseStartup<Startup>()
+                .UseKestrel()
+                .UseUrls("https://*:5001");
                 //.UseUrls("http://*:5000");
                 //.UseIISIntegration()
     }

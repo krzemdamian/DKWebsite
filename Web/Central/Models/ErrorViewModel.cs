@@ -1,6 +1,6 @@
 using System;
 
-namespace DKWebsite.Website.Primary.Models
+namespace DKWeb.Web.Central.Models
 {
     public class ErrorViewModel
     {

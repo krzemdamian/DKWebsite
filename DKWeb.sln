@@ -1,0 +1,61 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.28803.352
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Sensors", "Sensors", "{79072DCF-E21B-4334-82D3-9FCE7606DD11}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Domain", "Domain", "{526C9FC9-2A80-481C-8A85-4E2CD2AFBE86}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Web", "Web", "{3BA6DAA8-E217-4F27-BB26-21E87D620381}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Network", "Network", "{0A1D3971-A69D-4D11-8F24-517652526512}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "nginx-certbot", "nginx-certbot", "{BE965542-B4AA-4B67-BAEE-F409A1F185DD}"
+	ProjectSection(SolutionItems) = preProject
+		Network\nginx-certbot\docker-compose.init.yml = Network\nginx-certbot\docker-compose.init.yml
+		Network\nginx-certbot\init-letsencrypt.sh = Network\nginx-certbot\init-letsencrypt.sh
+		Network\nginx-certbot\LICENSE = Network\nginx-certbot\LICENSE
+		Network\nginx-certbot\README.md = Network\nginx-certbot\README.md
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "data", "data", "{81527BA7-8786-4A7D-9FBC-5D6793B37CFE}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "nginx", "nginx", "{65FE9969-4510-4F64-878E-30328994A9CE}"
+	ProjectSection(SolutionItems) = preProject
+		Network\nginx-certbot\data\nginx\default.conf = Network\nginx-certbot\data\nginx\default.conf
+	EndProjectSection
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RpiREST", "Sensors\RpiREST\RpiREST.csproj", "{939540F8-1B41-460D-8F57-E62A9AD1D156}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Central", "Web\Central\Central.csproj", "{74932204-A333-4BA5-8BFF-F2EC15617EFA}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{939540F8-1B41-460D-8F57-E62A9AD1D156}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{939540F8-1B41-460D-8F57-E62A9AD1D156}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{939540F8-1B41-460D-8F57-E62A9AD1D156}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{939540F8-1B41-460D-8F57-E62A9AD1D156}.Release|Any CPU.Build.0 = Release|Any CPU
+		{74932204-A333-4BA5-8BFF-F2EC15617EFA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{74932204-A333-4BA5-8BFF-F2EC15617EFA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{74932204-A333-4BA5-8BFF-F2EC15617EFA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{74932204-A333-4BA5-8BFF-F2EC15617EFA}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{BE965542-B4AA-4B67-BAEE-F409A1F185DD} = {0A1D3971-A69D-4D11-8F24-517652526512}
+		{81527BA7-8786-4A7D-9FBC-5D6793B37CFE} = {BE965542-B4AA-4B67-BAEE-F409A1F185DD}
+		{65FE9969-4510-4F64-878E-30328994A9CE} = {81527BA7-8786-4A7D-9FBC-5D6793B37CFE}
+		{939540F8-1B41-460D-8F57-E62A9AD1D156} = {79072DCF-E21B-4334-82D3-9FCE7606DD11}
+		{74932204-A333-4BA5-8BFF-F2EC15617EFA} = {3BA6DAA8-E217-4F27-BB26-21E87D620381}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {01DCAA86-44F1-4263-8A27-9DD14C8C007C}
+	EndGlobalSection
+EndGlobal

@@ -4,9 +4,9 @@ using System.Diagnostics;
 using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
-using DKWebsite.Website.Primary.Models;
+using DKWeb.Web.Central.Models;
 
-namespace DKWebsite.Website.Primary.Controllers
+namespace DKWeb.Website.Central.Controllers
 {
     public class HomeController : Controller
     {

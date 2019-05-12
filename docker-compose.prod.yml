@@ -6,8 +6,10 @@ networks:
     external: true
 
 services:
-  primary:
-    build: Website/Primary/Dockerfile
+  central:
+    build:
+      context: Web/Central/
+      dockerfile: Dockerfile
     networks:
      - frontend
      - backend

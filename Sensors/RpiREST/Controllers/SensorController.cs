@@ -10,7 +10,7 @@ using Iot.Units;
 
 // For more information on enabling Web API for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
 
-namespace TesApi.Controllers
+namespace DKWeb.Sensors.RpiREST.Controllers
 {
     [Route("api/[controller]")]
     public class SensorController : Controller

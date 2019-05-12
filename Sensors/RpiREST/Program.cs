@@ -7,7 +7,7 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
 
-namespace TestApi
+namespace DKWeb.Sensors.RpiREST
 {
     public class Program
     {
