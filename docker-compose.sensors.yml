@@ -1,0 +1,23 @@
+version: '3.4'
+networks:
+  frontend:
+    external: true
+  backend:
+    external: true
+
+services:
+  sensors:
+    build:
+      context: Sensor/RaspberryREST/
+      dockerfile: Dockerfile
+    networks:
+     - backend
+    privileged: true
+
+  prmiary:
+    build:
+      context: Website/Prmiary/
+      dockerfile: Dockerfile
+    networks:
+     - frontend
+     - backend

@@ -9,6 +9,9 @@
     <DockerServiceName>dkwebsite</DockerServiceName>
   </PropertyGroup>
   <ItemGroup>
+    <None Include="deploy_instructions.md" />
+    <None Include="docker-compose.sensors.yml" />
+    <None Include="docker-compose.db.yml" />
     <None Include="docker-compose.prod.yml" />
     <None Include="docker-compose.override.yml">
       <DependentUpon>docker-compose.yml</DependentUpon>

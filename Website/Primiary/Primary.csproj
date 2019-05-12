@@ -6,6 +6,8 @@
     <DockerDefaultTargetOS>Linux</DockerDefaultTargetOS>
     <UserSecretsId>0b99efe0-e250-4bbe-ae91-f4aa1ef98678</UserSecretsId>
     <DockerComposeProjectPath>..\..\docker-compose.dcproj</DockerComposeProjectPath>
+    <AssemblyName>Primiary</AssemblyName>
+    <StartupObject>DKWebsite.Website.Primary.Program</StartupObject>
   </PropertyGroup>
 
 

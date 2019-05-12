@@ -6,10 +6,8 @@ networks:
     external: true
 
 services:
-  dkwebsite:
-    build:
-      context: .
-      dockerfile: Website/DKWebsite/Dockerfile
+  primary:
+    build: Website/Primary/Dockerfile
     networks:
      - frontend
      - backend
