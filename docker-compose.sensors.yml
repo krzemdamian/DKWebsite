@@ -13,11 +13,8 @@ services:
     networks:
      - backend
     privileged: true
-
-  primary:
-    build:
-      context: Website/Primary/
-      dockerfile: Dockerfile
-    networks:
-     - frontend
-     - backend
+    ports:
+    - target: 80
+      published: 82
+      protocol: tcp
+      mode: host
